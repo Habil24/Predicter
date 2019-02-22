@@ -1,0 +1,62 @@
+<div>
+    <h2> Answer the questions below</h2>
+    <form id="carForm" ng-submit="carAnswers.getAnswers(carData);">
+         <!-- Here Your family and lifestyle and family influences on the # of cylinders-->
+        <div class="form-group">
+            <label for="cylinder">Family & Life style</label>
+            <br>
+            <select class = "form-control" name="cylinder" ng-model="carAnswers.carData.Cylinders">
+                    <option value="4">Small Family,I need it to commute to and from work</option>
+                    <option value="6">Large Family, I travel long distances for camping and etc</option>
+                    <option value="8">I love sports cars and action</option>
+            </select>
+        </div>
+        <!-- Here You should be careful. Less Important you choose 0<x<15,important
+        you choose 15<x<31, very important x>31 but not smaller than 31 MPG-->
+        <div class="form-group">
+            <label for="mgp">To what extent the fuel economy is important for you?</label>
+            <br>
+            <select class = "form-control" name="mpg" ng-model="carAnswers.carData.MPG">
+                <option value="VeryImportant">Very Important</option>
+                <option value="Important">Important</option>
+                <option value="LessImportant">Less Important</option>  
+            </select>
+        </div>
+
+         <!-- Here You should be careful. Low P&P you choose 0<x<76,medium
+        you choose 76<x<150, very important 150<x<230-->
+        <div class="form-group">
+            <label for="fuelEconomyHorsePower">Which is more Important for you?Performance and Power or Fuel Economy?</label>
+            <br>
+            <select class = "form-control" name="fuelEconomyHorsePower" ng-model="carAnswers.carData.Horsepower">
+                <option value="HighPP">High Power and Performance</option>
+                <option value="MediumPPFuel">Medium Power and Performance, but also Fuel Economy</option>
+                <option value="LowPPHighFuel">Low Power and Performance, high Fuel Economy</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="origin">Origin</label>
+            <select class="form-control" name="origin" ng-model="carAnswers.carData.Origin">
+                <option value="USA">USA</option>
+                <option value="Europa">Europa</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+
+        <button class="btn btn-default" type="submit">Calculate Result</button>
+
+        <br>
+        <br>
+        <div id="RESULT" style="margin: auto;width: 60%;overflow-y: auto;height: 300px;" ng-controller="carData" ng-show="showResult">
+            <h5>Here are the cars that we have found for you according to your responses: </h3>
+            <ul style="border-left: 5px solid red;background-color: #f1f1f1;list-style-type: none;padding: 10px 20px;">
+                <li style="border: thin solid black" ng-repeat="car in cars">{{car}}</li>
+            </ul>
+        </div>
+
+    </form>
+</div>
+<div id="result">
+
+</div>

@@ -1,0 +1,35 @@
+<br>
+<br>
+<div>
+    <h1>Reset Password</h1>
+    <br>
+    <br>
+    <h5 style="color:steelblue;">Please write down your email, so that the confirmation link will be sent there</h5>
+    <form id="resetPass" ng-submit="password.sendPassword(userData)">
+        <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" placeholder="Your email.." ng-model="password.userData.email" required>
+        </div>
+        <button class="btn btn-default" type="submit">Reset Password</button>
+    </form>
+</div>
+
+<br>
+
+
+<br>
+
+<div id="load" class="jumbotron text-center" ng-show="main.loading">
+    <span class="glyphicon glyphicon-repeat spinner"></span>
+    <p>Loading...</p>
+</div>
+
+<br>
+
+<div id = "suc" class="row show-hide-message" ng-show="password.successMessage">
+    <div class="alert alert-success">{{ password.successMessage }}</div>
+</div>
+
+<div id = "err" class="row show-hide-message" ng-show="password.errMessage">
+    <div class="alert alert-danger">{{ password.errMessage }}</div>
+</div>

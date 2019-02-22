@@ -1,0 +1,40 @@
+<h1 id="signUp">Log In</h1>
+<form id="logForm" ng-submit="main.doLogin(logData)">
+    <div class="form-group">
+    <label for="username">Username</label>
+    <input ng-disabled="main.disabled" class="form-control" type="text" name="username" placeholder="Your username.." ng-model="main.logData.username">
+    </div>
+    <div class="form-group">
+    <label for="password">Password</label>
+    <input ng-disabled="main.disabled" class="form-control" type="password" name="password" placeholder="Your password.." ng-model="main.logData.password">
+    </div>
+    <div id="changePassByEmail">
+        <a href="/resetPass">Forgot Password?</a>
+    </div>
+    <div id="changeUsernameByEmail">
+        <a href="/resetUsername">Forgot Username?</a>
+    </div>
+    <br>
+   
+    <button ng-disabled="main.disabled" class="btn btn-success" type="submit"> Log In</button>
+</form>
+
+<br>
+
+
+<br>
+
+<div id="load" class="jumbotron text-center" ng-show="main.loading">
+    <span class="glyphicon glyphicon-repeat spinner"></span>
+    <p>Loading...</p>
+</div>
+
+<br>
+
+<div id = "suc" class="row show-hide-message" ng-show="main.successMessage">
+    <div class="alert alert-success">{{ main.successMessage }}</div>
+</div>
+
+<div id = "err" class="row show-hide-message" ng-show="main.errMessage">
+    <div class="alert alert-danger">{{ main.errMessage }}</div>
+</div>

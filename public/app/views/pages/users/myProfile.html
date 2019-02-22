@@ -1,0 +1,36 @@
+<div>
+    <h1>{{ main.userName }}'s Profile</h1>
+</div>
+
+<div id = "ppT" class="panel panel-info">
+
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="text-align: center;"><strong>User Profile</strong></div>
+
+    <!-- Table -->
+    <table class="table">
+        <tr>
+            <td><strong>Username</strong></td>
+            <td><strong>Email Address</strong></td>
+            <td><strong>Password</strong></td>
+        </tr>
+        <tr>
+            <td>{{ main.userName }}</td>
+            <td>{{ main.userEmail }}</td>
+            <td>****************</td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td> <strong><a href="/updatePassword">Update Password</a><strong</td>
+            <td><a  ng-click="resendLink(main.userName)"><button class="btn btn-danger" type="submit">Activate Account</button></a></td>
+        </tr>
+    </table>
+</div>
+
+<div id = "suc" class="row show-hide-message" ng-show="resend.successMessage">
+    <div class="alert alert-success">{{ resend.successMessage }}</div>
+</div>
+
+<div id = "err" class="row show-hide-message" ng-show="resend.errorMessage">
+    <div class="alert alert-danger">{{ resend.errorMessage }}</div>
+</div>

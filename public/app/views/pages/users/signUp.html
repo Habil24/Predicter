@@ -1,0 +1,45 @@
+ <h1 id="signUp">Sign Up</h1>
+<form id="regForm" ng-submit="register.regUser(regData)">
+    <div class="form-group">
+    <label for="name">Name</label>
+    <input ng-disabled="register.disabled" class="form-control" type="text" name="name" placeholder="Your name.." ng-model="register.regData.name">
+    </div>
+    <div class="form-group">
+        <label for="surame">Surname</label>
+        <input ng-disabled="register.disabled" class="form-control" type="text" name="surname" placeholder="Your surname.." ng-model="register.regData.surname">
+    </div>
+    <div class="form-group">
+    <label for="username">Username</label>
+    <input ng-disabled="register.disabled" class="form-control" type="text" name="username" placeholder="Your username.." ng-model="register.regData.username">
+    </div>
+    <div class="form-group">
+    <label for="password">Password</label>
+    <input ng-disabled="register.disabled" class="form-control" type="password" name="password" placeholder="Your password.." ng-model="register.regData.password">
+    </div>
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input ng-disabled="register.disabled" class="form-control" type="text" name="email" placeholder="Your email.." ng-model="register.regData.email">
+    </div>
+    <div class="form-group">
+    <label for="username">Date of Birth</label>
+    <input ng-disabled="register.disabled" class="form-control" type="date" name="dateOfBirth" placeholder="Your date of Birth.." ng-model="register.regData.dateOfBirth">
+    </div>
+    <button class="btn btn-default" type="submit"> Register</button>
+</form>
+
+<br>
+
+<div id="load" class="jumbotron text-center" ng-show="register.loading">
+    <span class="glyphicon glyphicon-repeat spinner"></span>
+    <p>Loading...</p>
+</div>
+
+<br>
+
+<div id = "suc" class="row show-hide-message" ng-show="register.successMessage">
+    <div class="alert alert-success">{{ register.successMessage }}</div>
+</div>
+
+<div id = "err" class="row show-hide-message" ng-show="register.errMessage">
+    <div class="alert alert-danger">{{ register.errMessage }}</div>
+</div>

@@ -1,0 +1,19 @@
+<div>
+    <h2> Google Forms </h2>
+</div>
+<br>
+<br>
+<br>
+<div id="selectForm">
+    <div class="form-group" >
+        <br>
+        <!--The Forms should be displayed below dynamically-->
+        <h5>Select Google Form</h5>
+        <select class = "form-control" ng-model="model.id" data-ng-options="form.id as form.name for form in forms" ></select>
+        
+    </div>
+    <button class="btn btn-default" ng-click="gData.getSheetID(model.id)" type="submit">OK</button>
+</div>
+  
+  
+

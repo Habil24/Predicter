@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="app/assets/header-login-signup.css">
+	<link rel="stylesheet" type="text/css" href="app/assets/animate.css">
+	<link rel="stylesheet" type="text/css" href="app/assets/style.css">
+	<script src="app/assets/angular.min.js"></script>
+	<script src="app/assets/angular-route.min.js"></script>
+	<script src="app/assets/angular-animate.min.js"></script>
+
+	<script src="app/app.js"></script>
+	<script src="app/routes.js"></script>
+	<script src="app/controllers/carCtrl.js"></script>
+	<script src="app/controllers/emailCtrl.js"></script>
+	<script src="app/controllers/extrasCtrl.js"></script>
+	<script src="app/controllers/userCtrl.js"></script>
+	<script src="app/controllers/mainCtrl.js"></script>
+	<script src="app/services/userServices.js"></script>
+	<script src="app/services/authServices.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Predicter</title>
+	
+
+</head>
+<body ng-app="userApp" ng-controller="mainCtrl as main" ng-show="main.loadMe" ng-controller="ctrl">
+
+<header class="header-login-signup">
+
+	<div class="header-limiter">
+
+		<h1><a href="#/">PREDICT<span>ER</span></a></h1>
+
+		<nav>
+			<a href="/">Home</a>
+			<a ng-show="main.isLoggedIn" href="/myProfile">My Profile</a>
+			<a ng-show="main.isLoggedIn" href="/predictions">Predictions</a>
+			<a ng-show="main.isLoggedIn" href="/extras">Extras</a>
+			<a href="/about">About</a>
+		</nav>
+
+		<ul>
+			<li><a ng-show="main.isLoggedIn" href="#"  ng-click="main.logOut()">Logout</a></li>
+			<li><a ng-show="!main.isLoggedIn" href="/login">Login</a></li>
+			<li><a ng-show="!main.isLoggedIn" href="/register">Sign up</a></li>
+			
+		</ul>
+
+	</div>
+
+</header>
+<!-- Here will be displayed the routed pages -->
+<div ng-view id="pagesContainer">
+	
+</div>
+<footer id="indexFooter">
+	<h4 id="copyRight">Copyright 2018 by Predicter. All Rights Reserved.</h4>
+</footer>
+<!--  -->
+</body>
+
+</html>

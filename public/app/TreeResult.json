@@ -1,0 +1,74 @@
+{
+    "name": "shape",
+    "alias": "shape_rp58mtajl82g",
+    "type": "feature",
+    "vals": [
+        {
+            "name": "square",
+            "alias": "square_rd3esm0gn638",
+            "type": "feature_value",
+            "child": {
+                "type": "result",
+                "val": false,
+                "name": false,
+                "alias": "false_rqcfq0lkke2"
+            }
+        },
+        {
+            "name": "circle",
+            "alias": "circle_rv5bnm79cf4g",
+            "type": "feature_value",
+            "child": {
+                "type": "result",
+                "val": true,
+                "name": true,
+                "alias": "true_r5hfjs3u9u3o"
+            }
+        },
+        {
+            "name": "hexagon",
+            "alias": "hexagon_reboo2v8db8",
+            "type": "feature_value",
+            "child": {
+                "name": "color",
+                "alias": "color_r0e98510il1g",
+                "type": "feature",
+                "vals": [
+                    {
+                        "name": "blue",
+                        "alias": "blue_rgnvvbqmrvh8",
+                        "type": "feature_value",
+                        "child": {
+                            "type": "result",
+                            "val": false,
+                            "name": false,
+                            "alias": "false_rol6f92030ho"
+                        }
+                    },
+                    {
+                        "name": "red",
+                        "alias": "red_rqsvi0dg7feo",
+                        "type": "feature_value",
+                        "child": {
+                            "type": "result",
+                            "val": false,
+                            "name": false,
+                            "alias": "false_renfm5gkoa1o"
+                        }
+                    },
+                    {
+                        "name": "yellow",
+                        "alias": "yellow_r5ga9k711uq",
+                        "type": "feature_value",
+                        "child": {
+                            "type": "result",
+                            "val": true,
+                            "name": true,
+                            "alias": "true_rhe2t2n1ilog"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
